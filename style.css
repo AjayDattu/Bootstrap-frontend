@@ -1,0 +1,41 @@
+main{
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.anima{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 10px;
+    animation: autoanimation;
+    animation-timeline: view();
+}
+
+@keyframes autoanimation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.scroll {
+    animation: follow;
+    animation-timeline: view();
+    
+}
+
+@keyframes follow {
+    from {
+        transform: translateY(0px) scale(1);
+    }
+    to {
+        transform: translateY(100px) scale(1);
+    }
+}
